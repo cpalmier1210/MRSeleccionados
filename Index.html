@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <title>MRuggiero Usados Seleccionados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
       box-sizing: border-box;
@@ -33,6 +34,7 @@
       display: flex;
       justify-content: center;
       padding: 20px;
+      flex-wrap: wrap;
     }
     .car-card {
       margin: 10px;
@@ -92,6 +94,22 @@
       left: 50%;
       transform: translate(-50%, -50%) rotate(-30deg);
     }
+    .whatsapp-contact {
+      display: inline-block;
+      margin-left: 10px;
+      transform: scale(0.4);
+    }
+    .whatsapp-logo {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      .car-card {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -136,17 +154,16 @@
       <div class="sold-overlay"></div>
       <div class="sold-text">VENDIDO</div>
     </div>
-
   </div>
 
   <!-- Información de contacto -->
   <div class="contact-info">
-    <h2>Contacto</h2>
-    <p>Puedes contactarnos a los siguientes números:</p>
-    <ul>
-      <li>Matías Ruggiero: 11 6769-2124</li>
-      <li>Claudio Palmieri: 11 5054-7573</li>
-    </ul>
+      <h2>Contacto</h2>
+      <p>Puedes contactarnos a los siguientes números:</p>
+      <ul>
+        <li>Matías Ruggiero: 11 6769-2124 <a href="https://wa.me/541167692124" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
+        <li>Claudio Palmieri: 11 5054-7573 <a href="https://wa.me/541150547573" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
+      </ul>
   </div>
 </body>
 </html>
