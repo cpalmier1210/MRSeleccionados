@@ -32,18 +32,21 @@
     }
     .main-content {
       display: flex;
-      justify-content: center;
-      padding: 20px;
       flex-wrap: wrap;
+      justify-content: space-between; /* Nueva propiedad para espaciar las fichas */
+      max-width: 800px; /* Nueva propiedad para limitar el ancho del contenido */
+      margin: 0 auto; /* Nueva propiedad para centrar el contenido */
+      padding: 20px;
+      row-gap: 10px; /* Reducción en la separación vertical entre las fichas */
+      column-gap: 1px; /* Reducción en la separación horizontal entre las fichas */
     }
     .car-card {
-      margin: 10px;
+      flex-basis: 21%; /* Nuevo tamaño para cada ficha (23% para 4 fichas por fila) */
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
-      max-width: 250px;
       position: relative;
     }
     .car-card img {
@@ -54,7 +57,9 @@
     }
     .car-card p {
       margin: 5px 0;
+      font-size: 12px; /* Tamaño de fuente ajustado (puedes modificarlo según tus preferencias) */
     }
+
     .contact-info {
       text-align: center;
       padding: 20px;
@@ -81,11 +86,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 0, 0, 0.2); /* Color rojo claro semi-transparente */
+      background-color: rgba(255, 0, 0, 0.2);
       border-radius: 8px;
     }
     .sold-text {
-      color: #FF0000; /* Color rojo */
+      color: #FF0000;
       font-weight: bold;
       font-size: 24px;
       transform: rotate(-30deg);
@@ -107,7 +112,7 @@
     /* Estilos responsivos */
     @media (max-width: 768px) {
       .car-card {
-        max-width: 100%;
+        flex-basis: 100%; /* Cambio en el tamaño para adaptarse a pantallas más pequeñas */
       }
     }
   </style>
@@ -154,15 +159,34 @@
       <div class="sold-overlay"></div>
       <div class="sold-text">VENDIDO</div>
     </div>
+    
+    <!-- Ficha del automóvil 5 -->
+    <div class="car-card">
+      <img src="https://i.postimg.cc/wBsNR1gv/Peugeot-408.jpg" alt="Peugeot 408 Allure Plus 2012">
+      <p>Peugeot 408 Allure Plus 2012</p>
+      <p>GNC 5° generación</p>
+      <p>128.000 km.</p>
+      <p>$3.500.000</p>
+    </div>
+    <!-- Ficha del automóvil 6 -->
+    <div class="car-card">
+          <img src="https://i.postimg.cc/BvccSPv9/Peugeot-207.jpg" alt="Peugeot 207 XR 1.4 2013">
+          <p>Peugeot 207 XR 1.4 2013</p>
+          <p>129.000 km.</p>
+          <p>$3.200.000</p>
+    </div>
   </div>
+
+
 
   <!-- Información de contacto -->
   <div class="contact-info">
-      <h2>Contacto</h2>
-      <ul>
-        <li>Matías Ruggiero: 11 6769-2124 <a href="https://wa.me/541167692124" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
-        <li>Claudio Palmieri: 11 5054-7573 <a href="https://wa.me/541150547573" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
-      </ul>
+    <h2>Contacto</h2>
+    <ul>
+      <li>Matías Ruggiero: 11 6769-2124 <a href="https://wa.me/541167692124" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
+      <li>Claudio Palmieri: 11 5054-7573 <a href="https://wa.me/541150547573" target="_blank"><img src="https://i.postimg.cc/nrGY1qcs/wa.jpg" alt="Logo de WhatsApp" class="whatsapp-logo"></a></li>
+    </ul>
   </div>
+
 </body>
 </html>
